@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+    <div class="container-fluid m-0 d-flex justify-content-between">
+        <div class="d-flex">
+            <a class="navbar-brand" routerLink="/">{{navName}}</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about">About</a>
+                </li>
+            </ul>
+        </div>
+        <span [class.VIP] = "clickCounter >= 200" [style.display] = "clickCounter >= 200 ? 'block' : 'none'">VIP</span>
+        <span class="btn btn-warning" (click)="countClick()">Donate 10€</span>
+    </div>
+  </nav>
